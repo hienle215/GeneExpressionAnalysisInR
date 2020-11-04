@@ -15,13 +15,13 @@ library(Rsubread)
 #### ####
 # Build a genome index for reference chromosome 1 sequence
 #### ####
-buildindex(basename="chr1",reference="hg19_chr1.fa.txt")
+buildindex(basename="chr1",reference="C:\\Users\\leh\\Documents\\GeneExpressionAnalysis_DATA\\hg19_chr1.fa.txt")
 
 #### ####
 # Align reads to the indexed genome 
 #### ####
 align(index="chr1",
-      readfile1="sequencing_sample.fastq.txt",
+      readfile1="C:\\Users\\leh\\Documents\\GeneExpressionAnalysis_DATA\\sequencing_sample.fastq.txt",
       input_format="gzFASTQ",
       output_format="BAM",
       output_file="sequencing_sample.bam",
@@ -38,4 +38,7 @@ propmapped("sequencing_sample.bam")
 counts <- featureCounts(files="sequencing_sample.bam",
                         annot.inbuilt="hg19")
 
-
+### Counts will show the results of 4 lists
+ View(counts$counts)
+ View(counts$annotation)
+ View(counts$stat)
