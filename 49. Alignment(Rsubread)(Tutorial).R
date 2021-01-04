@@ -1,6 +1,6 @@
 #### ####
 # Differential gene expression analysis course - RNAseq - alignment
-#### ####
+#### ###
 
 #### ####
 # Packages
