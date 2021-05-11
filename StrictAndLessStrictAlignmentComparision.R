@@ -26,3 +26,12 @@ align(index="chr1",
 proMapTab1 = propmapped(c("sequencing_sample.bam","1_less_strigent.bam"))
 
 counts <- featureCounts(files=c("sequencing_sample.bam","1_less_strigent.bam"), annot.inbuilt="hg19")
+
+View(proMapTab1)
+View(counts$counts)
+keep = counts$counts[,1] > 0 & counts$counts[,2]
+counts$counts[keep,1] == counts$counts[keep,2]
+sum(counts$counts[keep,1] == counts$counts[keep,2])
+sum(counts$counts[keep,1] == counts$counts[keep,2])/sum(keep)
+round(sum(counts$counts[keep,1] == counts$counts[keep,2])/sum(keep))*100
+round(sum(counts$counts[keep,1] < counts$counts[keep,2])/sum(keep))*100
