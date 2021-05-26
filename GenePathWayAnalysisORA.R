@@ -1,0 +1,6 @@
+###Hands on ORA-based pathway analysis
+Hands on ORA analysis
+
+In the previous lecture you've learned about the ORA and GSEA approaches to pathway analyses. In this lecture you have a chance to put that knowledge into practice. First, let's practice doing ORA. In order to do that, the first step is to make a text file with a list of genes that we found to be differentially expressed. For the purpose of this practice please download and use the ORA.txt list. Then go to https://reactome.org/PathwayBrowser/#TOOL=AT and upload the list under Select data file for analysis. Click on "Continue" on the top right corner, and then in the next page restrict the analysis to human by clicking Poject to human and click on Analyse. The gene sets included in the analysis will include Reactome pathway database gene set definitions. Then answer the quiz questions.
+  
+  Note that in this analysis using this Reactome page resource we're not setting the actual number of background genes and simply going with a default number of background human genes. If you want to set your own number of background gene you could either use http://pantherdb.org/ or http://www.webgestalt.org/ or limma R package.
